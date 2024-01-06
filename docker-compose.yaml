@@ -9,6 +9,15 @@ services:
       MINIO_ACCESS_KEY: minio
       MINIO_SECRET_KEY: minio123
     command: server --console-address :19001 --quiet /data
+  dremiov1:
+    build: ./
+    volumes:
+    - ./dremiov2:/myappdemo
+    ports:
+      - "9048:9047"
+      - "31011:31010"
+      - "9090:9090"
+      - "32010:32010"
   dremio:
      build: .
      volumes:

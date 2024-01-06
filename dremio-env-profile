@@ -119,4 +119,4 @@
 # Extra Java options - server only (dremio command)
 #
 #DREMIO_JAVA_SERVER_EXTRA_OPTS=
-DREMIO_JAVA_SERVER_EXTRA_OPTS="-agentpath:/opt/jprofiler14/bin/linux-x64/libjprofilerti.so=port=8849,nowait"
+DREMIO_JAVA_SERVER_EXTRA_OPTS="-agentpath:/opt/jprofiler14/bin/linux-x64/libjprofilerti.so=port=8849,nowait -agentlib:jdwp=transport=dt_socket,address=9090,server=y,suspend=n"
